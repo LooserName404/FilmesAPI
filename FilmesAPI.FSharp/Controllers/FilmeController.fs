@@ -7,14 +7,26 @@ open FilmesAPI.FSharp
 
 [<ApiController>]
 [<Route("[controller]")>]
-type FilmeController(logger: ILogger<FilmeController>) =
+type FilmeController() =
     inherit ControllerBase()
 
     static let mutable filmes: Filme list = [];
+    static let mutable id = 1
 
     [<HttpPost>]
-    member _.AdicionaFilme ([<FromBody>]filme) =
-        filmes <- filme::filmes
-        ()
+    member this.AdicionaFilme ([<FromBody>]filme) =
+        let filmeWithId = { filme with Id = id }
+        filmes <- filmes |> List.append [filmeWithId]
+        id <- id + 1
+        this.CreatedAtAction("RecuperaFilmePorId", {| id = filmeWithId.Id |}, filmeWithId)
+
+    [<HttpGet>]
+    member this.RecuperaFilmes () = this.Ok(filmes)
+
+    [<HttpGet("{id}", Name = "RecuperaFilmePorId")>]
+    member this.RecuperaFilmePorId (id: int) : IActionResult = 
+        match (filmes |> List.tryFind (fun f -> f.Id = id)) with
+        | Some filme -> this.Ok(filme)
+        | None -> this.NotFound()
 
 

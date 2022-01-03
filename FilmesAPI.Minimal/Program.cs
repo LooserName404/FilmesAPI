@@ -19,11 +19,24 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 var filmes = new List<Filme>();
+var id = 1;
 
 app.MapPost("/filme", (Filme filme) =>
 {
+    filme = filme with { Id = id++ };
     filmes.Add(filme);
+    return Results.CreatedAtRoute("RecuperaFilmePorId", new { Id = filme.Id }, filme);
 });
+app.MapGet("/filme", () =>
+{
+    return Results.Ok(filmes);
+});
+app.MapGet("/filme/{id:int}", (int id) =>
+{
+    var filme = filmes.FirstOrDefault(filme => filme.Id == id);
+    if (filme is not null) return Results.Ok(filme);
+    return Results.NotFound();
+}).WithName("RecuperaFilmePorId");
 
 app.Run();
 

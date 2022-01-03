@@ -7,4 +7,5 @@ type Filme = {
     [<Required>] Genero: string
     [<StringLength(30)>] Diretor: string
     [<Range(1, 600)>] Duracao: int
+    Id: int
 }

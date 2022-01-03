@@ -6,9 +6,7 @@
 
   <ItemGroup>
     <Compile Include="Models\Filme.fs" />
-    <Compile Include="WeatherForecast.fs" />
     <Compile Include="Controllers\FilmeController.fs" />
-    <Compile Include="Controllers/WeatherForecastController.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

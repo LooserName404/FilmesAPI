@@ -6,6 +6,7 @@ public record Filme (
     [Required] string Titulo,
     [Required] string Genero,
     [StringLength(30)] string Diretor,
-    [Required] int Duracao
+    [Required] int Duracao,
+    int Id
 );
 
