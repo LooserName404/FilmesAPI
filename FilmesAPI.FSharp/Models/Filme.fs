@@ -2,6 +2,7 @@
 
 open System.ComponentModel.DataAnnotations
 
+[<CLIMutable>]
 type Filme = {
     [<Required>] Titulo: string
     [<Required>] Genero: string

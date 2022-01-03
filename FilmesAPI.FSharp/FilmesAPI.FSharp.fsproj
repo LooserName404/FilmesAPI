@@ -6,8 +6,22 @@
 
   <ItemGroup>
     <Compile Include="Models\Filme.fs" />
+    <Compile Include="Data\FilmeContext.fs" />
+    <Compile Include="Migrations\20220103190524_CriandoTabelaDeFilme.fs" />
+    <Compile Include="Migrations\FilmeContextModelSnapshot.fs" />
     <Compile Include="Controllers\FilmeController.fs" />
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFrameworkCore.FSharp" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
