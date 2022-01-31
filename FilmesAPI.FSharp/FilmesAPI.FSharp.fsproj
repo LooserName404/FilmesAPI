@@ -6,7 +6,11 @@
 
   <ItemGroup>
     <Compile Include="Models\Filme.fs" />
+    <Compile Include="Data\Dtos\CreateFilmeDto.fs" />
+    <Compile Include="Data\Dtos\UpdateFilmeDto.fs" />
+    <Compile Include="Data\Dtos\ReadFilmeDto.fs" />
     <Compile Include="Data\FilmeContext.fs" />
+    <Compile Include="Profiles\FilmeProfiles.fs" />
     <Compile Include="Migrations\20220103190524_CriandoTabelaDeFilme.fs" />
     <Compile Include="Migrations\FilmeContextModelSnapshot.fs" />
     <Compile Include="Controllers\FilmeController.fs" />
@@ -14,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="EntityFrameworkCore.FSharp" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.1" />

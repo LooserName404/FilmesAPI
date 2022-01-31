@@ -1,13 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FilmesAPI.Models;
+namespace FilmesAPI.Minimal.Data.Dtos;
 
-public class Filme
+public class CreateFilmeDto
 {
-    [Key]
-    [Required]
-    public int Id { get; set; }
-
     [Required(ErrorMessage = "O campo Título é obrigatório")]
     public string Titulo { get; set; }
 
@@ -20,8 +16,5 @@ public class Filme
     [Range(1, 600, ErrorMessage = "A Duração deve ter no mínimo 1 e no máximo 600 minutos")]
     public int Duracao { get; set; }
 
-    public int ClassificacaoEtaria { get; set; }
-
-    public virtual List<Sessao> Sessoes { get; set; }
 }
 

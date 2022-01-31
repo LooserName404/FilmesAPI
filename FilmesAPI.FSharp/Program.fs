@@ -17,6 +17,7 @@ module Program =
 
         builder.Services.AddControllers()
         builder.Services.AddDbContext<FilmeContext>(fun opt -> opt.UseSqlite(connectionString = (builder.Configuration.GetSection("ConnectionStrings").Item "FilmeConnection")) |> ignore )
+        builder.Services.AddAutoMapper(System.AppDomain.CurrentDomain.GetAssemblies())
 
         let app = builder.Build()
 
