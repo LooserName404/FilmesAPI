@@ -1,4 +1,5 @@
 using FilmesAPI.Data;
+using FilmesAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Proxies;
 
@@ -7,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseLazyLoadingProxies().UseSqlite(builder.Configuration.GetConnectionString("FilmeConnection")));
+builder.Services.AddScoped<FilmeService, FilmeService>();
+builder.Services.AddScoped<CinemaService, CinemaService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

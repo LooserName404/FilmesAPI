@@ -11,6 +11,6 @@ public class SessaoProfile : Profile
         CreateMap<CreateSessaoDto, Sessao>();
         CreateMap<Sessao, ReadSessaoDto>()
             .ForMember(dto => dto.HorarioDeInicio, opts =>
-                opts.MapFrom(dto => dto.HorarioDeEncerramento.AddMinutes(-dto.Filme.Duracao);
+                opts.MapFrom(dto => dto.HorarioDeEncerramento.AddMinutes(-dto.Filme.Duracao)));
     }
 }
