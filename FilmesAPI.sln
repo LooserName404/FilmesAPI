@@ -5,9 +5,11 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmesAPI", "FilmesAPI\FilmesAPI.csproj", "{A279F0C7-1F35-471D-A0B7-21BBFB0D5CD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmesAPI.Minimal", "FilmesAPI.Minimal\FilmesAPI.Minimal.csproj", "{EFB2BC12-77B3-47D4-984C-033FA997C44D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmesAPI.Minimal", "FilmesAPI.Minimal\FilmesAPI.Minimal.csproj", "{EFB2BC12-77B3-47D4-984C-033FA997C44D}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FilmesAPI.FSharp", "FilmesAPI.FSharp\FilmesAPI.FSharp.fsproj", "{C2356A0E-19B5-4A62-B310-C1B46DA0F6B4}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FilmesAPI.FSharp", "FilmesAPI.FSharp\FilmesAPI.FSharp.fsproj", "{C2356A0E-19B5-4A62-B310-C1B46DA0F6B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsuariosAPI", "UsuariosAPI\UsuariosAPI.csproj", "{4DFCFE8E-56EA-4BF2-9C3F-3833F0585AA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C2356A0E-19B5-4A62-B310-C1B46DA0F6B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2356A0E-19B5-4A62-B310-C1B46DA0F6B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2356A0E-19B5-4A62-B310-C1B46DA0F6B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DFCFE8E-56EA-4BF2-9C3F-3833F0585AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DFCFE8E-56EA-4BF2-9C3F-3833F0585AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DFCFE8E-56EA-4BF2-9C3F-3833F0585AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DFCFE8E-56EA-4BF2-9C3F-3833F0585AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
